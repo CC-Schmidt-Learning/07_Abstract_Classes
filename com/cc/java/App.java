@@ -10,13 +10,27 @@ System.out.println("Fläche Kreis: "+ circle.area());
 Triangle triangle= new Triangle(3, 15);
 System.out.println("Fläche Dreieck: "+ triangle.area());
 output("------  Differenzen ------");
-output("Diff. r-t: " + areaDiff(rectangle, triangle)); 
+output("Diff. r-t: " + areaDiff(rectangle, triangle));
+output("------  Differenzen ------");
+output("Diff. r-t: " + areaDiff(rectangle, circle)); 
+output("------  Differenzen ------");
+output("Diff. t-t: " + areaDiff(triangle, triangle)); 
     }
 
-    private static double areaDiff(Rectangle r, Triangle t) {
+    private static double areaDiff(Shape s1, Shape s2) {
 
-        return r.area() - t.area();
+        return s1.area() - s2.area();
      }
+
+    // private static double areaDiff(Rectangle r, Triangle t) {
+
+    //     return r.area() - t.area();
+    //  }
+
+    //  private static double areaDiff(Rectangle r, Circle c) {
+
+    //     return r.area() - c.area();
+    //  }
 
     public static void output(String outputStr) {
         System.out.println(outputStr);
